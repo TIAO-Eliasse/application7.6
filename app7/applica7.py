@@ -18,7 +18,8 @@ st.plotly_chart(fig)
 #Nuage de points intéractifs
 #uploaded_file=st.file_uploader("Automobile_data.csv",type=["csv"])
 #if uploaded_file is not None:
-cars=pd.read_csv("https://github.com/TIAO-Eliasse/application7.6/blob/main/app7/Automobile_data.csv")
+cars = pd.read_csv("https://github.com/TIAO-Eliasse/application7.6/blob/main/Automobile_data.csv", error_bad_lines=False)
+
 st.write(cars)
 numeric_cols=cars.select_dtypes(exclude="object").columns.to_list()
 categoriecal_cols=cars.select_dtypes(include="object").columns.to_list()
