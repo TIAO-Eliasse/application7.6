@@ -16,7 +16,7 @@ fig=px.bar(data_frame=temps,y="temps",x="day",
 
 st.plotly_chart(fig)
 #Nuage de points intéractifs
-uploaded_file=st.file_uploader("Automobile_data.csv",type=["csv"]
+uploaded_file=st.file_uploader("Automobile_data.csv",type=["csv"])
 cars=pd.read_csv(uploaded_file)
 st.dataframe(cars)
 numeric_cols=cars.select_dtypes(exclude="object").columns.to_list()
